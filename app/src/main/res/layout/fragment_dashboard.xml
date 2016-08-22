@@ -1,0 +1,49 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        app:tabIndicatorColor="@color/primary_light"
+        app:tabTextColor="@android:color/white"
+        app:tabIndicatorHeight="3dp"
+        android:layoutDirection="ltr"
+        app:tabSelectedTextColor="@color/primary_light"/>
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout"/>
+
+
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/list_lotteries"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:clipToPadding="false"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:layoutDirection="rtl"-->
+        <!--android:scrollbars="none">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/dashboard_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_card_giftcard_white_24dp"
+        app:backgroundTint="@color/accent"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

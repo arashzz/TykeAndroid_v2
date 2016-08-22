@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">تایکی</string>
+    <string name="drawer_open">asd</string>
+    <string name="drawer_close">asd</string>
+
+    <string name="button_register_next_step">Next</string>
+    <string name="button_sex">جنسیت</string>
+    <string name="button_date_of_birth">تاریخ تولد</string>
+    <string name="button_cancel">انصراف</string>
+
+    <string name="hint_spending_code"><font size="12">کد خرید</font></string>
+    <string name="hint_login_username"><font size="12">نام کاربری</font></string>
+    <string name="hint_login_password"><font size="12">رمز عبور</font></string>
+
+</resources>

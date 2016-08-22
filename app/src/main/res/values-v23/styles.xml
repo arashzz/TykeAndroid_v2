@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:colorControlHighlight">#4D64B5F6</item>
+    </style>
+
+</resources>
