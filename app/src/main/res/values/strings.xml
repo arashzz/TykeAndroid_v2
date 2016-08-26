@@ -4,12 +4,21 @@
     <string name="drawer_close">asd</string>
 
     <string name="button_register_next_step">Next</string>
-    <string name="button_sex">جنسیت</string>
-    <string name="button_date_of_birth">تاریخ تولد</string>
     <string name="button_cancel">انصراف</string>
+    <string name="button_skip">بعدا انجام میدم</string>
 
     <string name="hint_spending_code"><font size="12">کد خرید</font></string>
     <string name="hint_login_username"><font size="12">نام کاربری</font></string>
     <string name="hint_login_password"><font size="12">رمز عبور</font></string>
+    <string name="hint_register_first_name"><font size="12">نام</font></string>
+    <string name="hint_register_last_name"><font size="12">نام خانوادگی</font></string>
+    <string name="hint_register_cell_number"><font size="12">شماره موبایل</font></string>
+
+    <string name="sex_male">مرد</string>
+    <string name="sex_female">زن</string>
+
+    <string name="text_view_sex">جنسیت</string>
+    <string name="text_view_date_of_birth">تاریخ تولد</string>
+    <string name="text_view_select_tags">لطفادسته بندی های مورد علاقه خود را انتخاب کنید</string>
 
 </resources>

@@ -3,6 +3,7 @@ package com.toranj.tyke.dagger.components;
 import com.toranj.tyke.dagger.modules.BrandModule;
 import com.toranj.tyke.dagger.modules.LotteryModule;
 import com.toranj.tyke.dagger.modules.SpendingModule;
+import com.toranj.tyke.dagger.modules.TagModule;
 import com.toranj.tyke.dagger.modules.UserModule;
 import com.toranj.tyke.dagger.scopes.PerActivity;
 import com.toranj.tyke.restApi.BrandApiInterface;
@@ -15,6 +16,7 @@ import com.toranj.tyke.ui.fragments.DashboardBrandsFragment;
 import com.toranj.tyke.ui.fragments.DashboardLotteriesFragment;
 import com.toranj.tyke.ui.fragments.LotteryDetailsFragment;
 import com.toranj.tyke.ui.fragments.Register1Fragment;
+import com.toranj.tyke.ui.fragments.Register3Fragment;
 import com.toranj.tyke.ui.fragments.SpendingFragment;
 
 import dagger.Component;
@@ -30,7 +32,8 @@ import dagger.Component;
                 LotteryModule.class,
                 SpendingModule.class,
                 BrandModule.class,
-                UserModule.class
+                UserModule.class,
+                TagModule.class
         }
 )
 public interface ComponentProvider {
@@ -41,6 +44,7 @@ public interface ComponentProvider {
     void inject(LotteryDetailsFragment fragment);
     void inject(BrandsFragment fragment);
     void inject(Register1Fragment fragment);
+    void inject(Register3Fragment fragment);
 
     BrandApiInterface brandApiInterface();
     LotteryApiInterface lotteryApiInterface();

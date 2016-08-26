@@ -1,98 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/primary"
-    android:padding="10dp">
+    android:fillViewport="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/register_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layoutDirection="rtl"
+            android:descendantFocusability="beforeDescendants"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/et_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType="textPersonName"
+                android:hint="@string/hint_register_first_name"/>
+
+            <EditText
+                android:id="@+id/et_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType="textPersonName"
+                android:hint="@string/hint_register_last_name"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_title"
+                    android:text="@string/text_view_sex"
+                    android:layout_weight="0.2"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_register_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.8">
+
+                    <RadioButton
+                        android:id="@+id/rb_register_male"
+                        android:layout_width="wrap_content"
+                        android:text="@string/sex_male"
+                        android:checked="true"
+                        android:buttonTint="@color/primary_dark"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/rb_register_female"
+                        android:layout_width="wrap_content"
+                        android:text="@string/sex_female"
+                        android:buttonTint="@color/primary_dark"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_title"
+                    android:text="@string/text_view_date_of_birth"
+                    android:layout_weight="0.2"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <NumberPicker
+                        android:id="@+id/np_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:layout_marginRight="5dp">
+
+                    </NumberPicker>
+
+                    <NumberPicker
+                        android:id="@+id/np_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7">
+
+                    </NumberPicker>
+
+                    <NumberPicker
+                        android:id="@+id/np_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7">
+
+                    </NumberPicker>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <EditText
+                    android:id="@+id/et_cell_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:inputType="phone"
+                    android:hint="@string/hint_register_cell_number"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    <Button
+        android:id="@+id/btn_register_next_step"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layoutDirection="rtl">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:text="@string/button_sex"/>
-
-            <NumberPicker
-                android:id="@+id/np_sex"
-                android:descendantFocusability="blocksDescendants"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="10dp"
-                android:scaleX=".8"
-                android:scaleY=".8"
-                android:layout_height="wrap_content">
-
-            </NumberPicker>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layoutDirection="rtl">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@android:color/white"
-                android:text="@string/button_date_of_birth"/>
-
-            <NumberPicker
-                android:id="@+id/np_day"
-                android:descendantFocusability="blocksDescendants"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="10dp"
-                android:scaleX=".8"
-                android:scaleY=".8"
-                android:layout_height="wrap_content">
-
-            </NumberPicker>
-            <NumberPicker
-                android:id="@+id/np_month"
-                android:descendantFocusability="blocksDescendants"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="10dp"
-                android:scaleX=".8"
-                android:scaleY=".8"
-                android:layout_height="wrap_content">
-
-            </NumberPicker>
-            <NumberPicker
-                android:id="@+id/np_year"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="10dp"
-                android:scaleX=".8"
-                android:scaleY=".8"
-                android:layout_height="wrap_content">
-
-            </NumberPicker>
-
-        </LinearLayout>
-    </LinearLayout>
+        android:text="@string/button_register_next_step"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_size_title"
+        android:padding="5dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"/>
 
     <Button
-        android:id="@+id/btn_register_step_2"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_register_cancel"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:background="@color/primary_dark"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:text="@string/button_register_next_step"
-        android:layout_alignParentBottom="true"/>
-</RelativeLayout>
+        android:text="@string/button_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="@dimen/text_size_title"
+        android:padding="5dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"/>
+    </RelativeLayout>
+</ScrollView>

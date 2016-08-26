@@ -5,4 +5,12 @@ package com.toranj.tyke.models;
  */
 public class Base {
     String Id;
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
 }

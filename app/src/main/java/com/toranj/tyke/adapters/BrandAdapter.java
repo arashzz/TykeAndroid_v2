@@ -28,17 +28,11 @@ public class BrandAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     public void addItems(List<Brand> items) {
-        if(this.items == null) {
-            this.items = new ArrayList<>();
-        }
         this.items.addAll(items);
         notifyDataSetChanged();
     }
 
     public void addItem(Brand item) {
-        if(items == null) {
-            items = new ArrayList<>();
-        }
         items.add(item);
         notifyDataSetChanged();
     }

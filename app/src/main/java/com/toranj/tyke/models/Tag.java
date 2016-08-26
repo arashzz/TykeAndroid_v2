@@ -7,6 +7,7 @@ public class Tag extends Base {
 
     String name;
     String displayName;
+    boolean isSelected = false;
 
     public String getName() {
         return name;
@@ -22,5 +23,13 @@ public class Tag extends Base {
 
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
     }
 }
