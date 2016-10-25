@@ -1,2 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.clans-fab-1.6.4_696e33c89994106373503dc6fdfd9d121d6527ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.9.0_1944a70e96506df489e4857e0e259f5d3c98d63c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_8ee4679d9376fd930fd1cfcc193fc1e81de36bcf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="421b36cf4f0d3bbd75e8f28647fccf36674ef049">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.2.1_cc99e7d0c213f85d0d373c5830ee542d0f2be939\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.0.1_1b8ccc3cbbd7fa374c24864aabec8b4ef2cf5fbc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="07c569a77f437c5c71eac8b1b636a50bebb69a93">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.2.1_a963d001540e6dbaa1be12c33e9f852525ba2e43\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_f09cb7eedf1a214ae5c9eea9407699e746cb8163\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.0.1_d4ccf0d0c917e7da4eab5e92e57d744c614687a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="819c2c3a4fb135e085445d11131d069cf9c32b2a">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.2.1_a55dbd5df9040049fc8adc009cd80d7c3401e972\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_2b0d3ca0ef1ddc61ba230fb177741f1223b11313\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\javax.inject-1_0d2d99aed2e9ec478ebe3ede8cef1b0181971ad7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.1_6caa1fe4da30cf2cc1676a54cb9890359b7ae5e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.5.2_b9ee2a96455f43921eb2d2a5d6322e12cf1a3016\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="9682fd2d689991c63e35b093391721771bcb5d2d">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0494a9a885f47aa3acea45304438508295103f75\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_ef9d076485d2f2a4d483cb0937b62188e6270f44\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.5\571f4e0451db64a7b41dbeb5f2503986fe5acdb4\dagger-2.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="571f4e0451db64a7b41dbeb5f2503986fe5acdb4">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\dagger-2.5_d2ef79928a96e442251e5b725184475900ce2ae0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="6b896c1067633db41e9c10a3a5d0919c5c4cfc8c">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.2.1_08e396b565a746e1adf974a4c9f5f32e94d10f86\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="85e1ceecdf59729ab65cd45c63fc51ce35354aed">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_3ec26f87c72e54106493172aea97f345f616f302\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_d4cecf2262f49f35ad116cb5b9461a44ae3acac8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="edf9a22ebf25281619265079aec8f5d433da1a5c">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.2.1_d7d641ccc6ccfc737a0850401a5da7bc34f46a13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.0.1_189ebeef29a5cb5b5552e8148abde71a02f4b2cc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.github.markomilos\paginate\0.5.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="239bbc360f222b90822c6f85f6ff203d57763382">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.markomilos-paginate-0.5.1_bdbd1acbfe90288088c6e04bb19b9a89efcd6662\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\de.hdodenhof-circleimageview-1.3.0_b1c7af7cd41780b7814461aa660142f675502478\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.0.1_a5a1ab2831d4a04594f72a5d146d015d451b3767\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.4.1_512c6c03447c50e37fbfb5774ec1f59a3d6b5b96\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="a65d98c9409f271d3209f4cc1f7d8e0391665fa5">
+        <dex dex="C:\Users\Arash Moeen\Documents\TykeAndroid_v2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.2.1_7cdcc44ded7852a78544cf3a0d3d741fcf997d26\classes.dex" />
+    </item>
+
+</items>

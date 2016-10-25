@@ -11,4 +11,6 @@ import java.util.List;
 public interface RegisterFragmentListener {
     void onStep1Finished(User user);
     void onStep2Finished(User user);
+    void onStep3Finished(User user);
+    void onRegisterCancel();
 }

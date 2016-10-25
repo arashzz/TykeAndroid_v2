@@ -1,6 +1,12 @@
 package com.toranj.tyke.ui.fragments;
 
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -39,8 +45,11 @@ public class Register1Fragment extends Fragment implements View.OnClickListener,
 
     private RegisterFragmentListener activityListener;
     private EditText firstNameTextView, lastNameTextView, cellNumberTextView;
-    private RadioGroup sexRadioGroup;
-    private NumberPicker dayNumberPicker, monthNumberPicker, yearNumberPicker, sexNumberPicker;
+    private ImageButton maleImageButton, femaleImageButton;
+    private NumberPicker dayNumberPicker, monthNumberPicker, yearNumberPicker;
+
+    private final String TAG_SEX_MALE = "male";
+    private final String TAG_SEX_FEMALE = "female";
 
     @Inject
     Retrofit retrofit;
@@ -71,6 +80,8 @@ public class Register1Fragment extends Fragment implements View.OnClickListener,
         return view;
     }
 
+
+    //assign the delegate here in the onAttach
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -95,18 +106,6 @@ public class Register1Fragment extends Fragment implements View.OnClickListener,
 
     @Override
     public void onClick(View view) {
-
-        String fullName = firstNameTextView.getText() + " " + lastNameTextView.getText();
-        User user = new User();
-        user.setName(fullName);
-        user.setSex(getSelectedSex());
-        user.setDateOfBirth(getSelectedDateOfBirth());
-        user.setUsername(cellNumberTextView.getText().toString());
-        //TODO: uncomment later for actual api call
-        //Call<User> call = userApiInterface.register(user);
-        //call.enqueue(new TykeCallback<User>(this));
-        //TODO: comment this when making an actual api call
-        activityListener.onStep1Finished(user);
 
     }
 
@@ -134,18 +133,47 @@ public class Register1Fragment extends Fragment implements View.OnClickListener,
         lastNameTextView = (EditText) view.findViewById(R.id.et_last_name);
         cellNumberTextView = (EditText) view.findViewById(R.id.et_cell_number);
 
-        sexRadioGroup = (RadioGroup)view.findViewById(R.id.rg_register_sex);
+        maleImageButton = (ImageButton)view.findViewById(R.id.ib_register_male);
+        maleImageButton.setTag(TAG_SEX_MALE);
+        maleImageButton.setOnClickListener(new SexButtonOnClickListener());
+        femaleImageButton = (ImageButton)view.findViewById(R.id.ib_register_female);
+        femaleImageButton.setTag(TAG_SEX_FEMALE);
+        femaleImageButton.setOnClickListener(new SexButtonOnClickListener());
 
+        //sexRadioGroup = (RadioGroup)view.findViewById(R.id.rg_register_sex);
         Button nextStep = (Button)view.findViewById(R.id.btn_register_next_step);
-        nextStep.setOnClickListener(this);
+        nextStep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fullName = firstNameTextView.getText() + " " + lastNameTextView.getText();
+                User user = new User();
+                user.setName(fullName);
+                //user.setSex(getSelectedSex());
+                user.setDateOfBirth(getSelectedDateOfBirth());
+                user.setUsername(cellNumberTextView.getText().toString());
+                //TODO: uncomment later for actual api call
+                //Call<User> call = userApiInterface.register(user);
+                //call.enqueue(new TykeCallback<User>(Register1Fragment.this));
+                //TODO: comment this when making an actual api call
+                activityListener.onStep1Finished(user);
+            }
+        });
+
+        Button cancel = (Button)view.findViewById(R.id.btn_register_cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activityListener.onRegisterCancel();
+            }
+        });
     }
 
 
     private String getSelectedSex() {
-        int selectedSexId = sexRadioGroup.getCheckedRadioButtonId();
-        if(selectedSexId == R.id.rb_register_female) {
-            return "female";
-        }
+//        int selectedSexId = sexRadioGroup.getCheckedRadioButtonId();
+//        if(selectedSexId == R.id.rb_register_female) {
+//            return "female";
+//        }
         return "male";
     }
 
@@ -168,5 +196,30 @@ public class Register1Fragment extends Fragment implements View.OnClickListener,
     @Override
     public void onFailure() {
 
+    }
+
+    private class SexButtonOnClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            if(v.getTag().toString().equals(TAG_SEX_MALE) && !v.isSelected()) {
+
+                maleImageButton.setSelected(true);
+                maleImageButton.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.primary_dark));
+                maleImageButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.primary));
+
+                femaleImageButton.setSelected(false);
+                femaleImageButton.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.primary));
+                femaleImageButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.primary_dark));
+            }
+            else if(v.getTag().toString().equals(TAG_SEX_FEMALE) && !v.isSelected()) {
+                femaleImageButton.setSelected(true);
+                femaleImageButton.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.primary_dark));
+                femaleImageButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.primary));
+
+                maleImageButton.setSelected(false);
+                maleImageButton.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.primary));
+                maleImageButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.primary_dark));
+            }
+        }
     }
 }

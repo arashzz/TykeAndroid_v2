@@ -16,17 +16,19 @@ import com.toranj.tyke.TykeApp;
 import com.toranj.tyke.helpers.AccountHelper;
 import com.toranj.tyke.models.User;
 import com.toranj.tyke.ui.fragments.Register1Fragment;
+import com.toranj.tyke.ui.fragments.Register2Fragment;
 import com.toranj.tyke.ui.fragments.Register3Fragment;
 import com.toranj.tyke.ui.fragments.listeners.RegisterFragmentListener;
+import com.toranj.tyke.utility.CurrentUser;
 
 
-public class RegisterActivity extends BaseActivity implements RegisterFragmentListener,
-        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class RegisterActivity extends BaseActivity implements RegisterFragmentListener {
 
     private FragmentManager fragmentManager;
 
     private final String TAG_STEP_1 = "step_1";
     private final String TAG_STEP_2 = "step_2";
+    private final String TAG_STEP_3 = "step_3";
     private String currentStep;
     private User registeringUser;
 
@@ -58,9 +60,23 @@ public class RegisterActivity extends BaseActivity implements RegisterFragmentLi
 
     @Override
     public void onStep2Finished(User user) {
-        AccountHelper ah = new AccountHelper(PreferenceManager.getDefaultSharedPreferences((TykeApp)getApplication()));
-        ah.setUserToken(user.getToken());
+        initiateStep3(user);
+    }
+
+    @Override
+    public void onStep3Finished(User user) {
+        AccountHelper ah = new AccountHelper(PreferenceManager.getDefaultSharedPreferences(getApplication()));
+        //TODO: uncomment later
+        //ah.setUserToken(user.getToken());
+        CurrentUser.setInfo(user);
         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void onRegisterCancel() {
+        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -78,21 +94,11 @@ public class RegisterActivity extends BaseActivity implements RegisterFragmentLi
 
     private void initiateStep2(User user) {
         currentStep = TAG_STEP_2;
+        replaceFragment(Register2Fragment.newInstance(user));
+    }
+
+    private void initiateStep3(User user) {
+        currentStep = TAG_STEP_3;
         replaceFragment(Register3Fragment.newInstance(user));
-    }
-
-    @Override
-    public void onConnected(@Nullable Bundle bundle) {
-
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
-    }
-
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
     }
 }

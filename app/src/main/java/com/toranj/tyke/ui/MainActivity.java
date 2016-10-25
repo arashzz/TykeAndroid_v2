@@ -34,7 +34,7 @@ import com.toranj.tyke.ui.fragments.listeners.SpendingDialogListener;
 import com.toranj.tyke.utility.CurrentUser;
 
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends BaseActivity
         implements DashboardFragmentListener, OnNavigationItemSelectedListener ,
         SpendingDialogListener, BrandsFragmentListener{
 
@@ -42,10 +42,6 @@ public class MainActivity extends AppCompatActivity
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;
-
-    //Components
-    private ComponentProvider componentProvider;
-    private AppComponent appComponent;
 
     //Fragment
     private final String TAG_DASHBOARD = "dashboard";
@@ -62,6 +58,7 @@ public class MainActivity extends AppCompatActivity
 //    @Inject
     FragmentManager fragmentManager;
 
+    //handles the click event for the floating action button shown in the dashboard
     @Override
     public void onFabClicked() {
         SpendingFragment spendingFragment = SpendingFragment.newInstance("test");
@@ -99,6 +96,7 @@ public class MainActivity extends AppCompatActivity
         super.onSaveInstanceState(outState);
     }
 
+    //handles the back button pressed
     @Override
     public void onBackPressed() {
         if(currentTag.equals(TAG_SPENDING)) {
@@ -113,28 +111,33 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //to inflate the menu into the toolbar
+    //TODO:should be removed later if no usage is declared for it
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //return super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.actions, menu);
         return true;
     }
-//
+
+    //post create event called to sync the drawer toggle after the onRestoreInstanceState has occurred.
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
         if(drawerToggle != null) {
             drawerToggle.syncState();
         }
     }
 
+    //for navigation drawer configuration change even
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
     }
 
+    //handles the navigation.
+    //Every time a new menu item is selected, the tag and fragment will be assigned respectively
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         if(!item.isChecked()) {
@@ -173,36 +176,41 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    //when a user cancels the fragment for adding the newly earned points
     @Override
     public void onSpendingDialogCancel() {
         removeFragment(TAG_SPENDING);
     }
 
+    //when a user enters the newly earned points into the system and press send
     @Override
     public void onSpendingDialogSend() {
 
     }
 
+    //when a brand is selected by user from the dashboard
     @Override
     public void dashboardBrandSelected(String brandId) {
-
+        //TODO: redirect to brand detail fragment
     }
 
+    //when a lottery is selected by user from the dashboard
     @Override
     public void dashboardLotterySelected(String lottery) {
-
+        //TODO: redirect to lottery detail fragment
     }
 
+    //when a spending is selected by user from the dashboard
+    //this will be triggered by the expiring points shown in the dashbaord
     @Override
     public void dashboardSpendingSelected() {
-
+        //TODO: redirect to spending detail fragment
     }
 
+    //replaces the input fragment with the current fragment
+    //with the respective tag but it will not add it to the backstack
     private void replaceFragment(Fragment fragment, String tag) {
         FragmentTransaction ft = fragmentManager.beginTransaction();
-//        ft.setCustomAnimations(
-//                R.anim.enter_from_left, R.anim.exit_to_right,
-//                R.anim.enter_from_right, R.anim.exit_to_left);
         ft.setCustomAnimations(
                 android.support.v7.appcompat.R.anim.abc_popup_enter,
                 android.support.v7.appcompat.R.anim.abc_popup_exit);
@@ -212,6 +220,8 @@ public class MainActivity extends AppCompatActivity
         ft.commit();
     }
 
+    //adds the input fragment into the container
+    //with the respective tag but it will not add it to the backstack
     private void addFragment(Fragment fragment, String tag) {
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.setCustomAnimations(
@@ -222,6 +232,8 @@ public class MainActivity extends AppCompatActivity
         currentTag = tag;
         ft.commit();
     }
+
+    //removes the fragment from the fragmentManager by using its tag
     private void removeFragment(String tag) {
         FragmentTransaction ft = fragmentManager.beginTransaction();
         currentTag = previousTag;
@@ -247,6 +259,9 @@ public class MainActivity extends AppCompatActivity
         }
         return false;
     }
+
+    //initializes the actionbar + navigation bar in the main activity
+    //should be called at the beginning of the activity life cycle
     private void initializeActionNavBar() {
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -288,6 +303,7 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setTitle("Arash");
     }
 
+    //populate the navigation header information with the current user
     private void setNavigationHeaderInformation() {
         View headerView = navigationView.inflateHeaderView(R.layout.drawer_header);
         TextView name = (TextView)headerView.findViewById(R.id.profile_name);
@@ -319,6 +335,8 @@ public class MainActivity extends AppCompatActivity
 //        }
 //    }
 
+
+    //when a brand is selected from the brand listing
     @Override
     public void brandSelected(String brandId) {
 

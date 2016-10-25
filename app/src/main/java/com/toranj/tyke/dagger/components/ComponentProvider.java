@@ -16,6 +16,7 @@ import com.toranj.tyke.ui.fragments.DashboardBrandsFragment;
 import com.toranj.tyke.ui.fragments.DashboardLotteriesFragment;
 import com.toranj.tyke.ui.fragments.LotteryDetailsFragment;
 import com.toranj.tyke.ui.fragments.Register1Fragment;
+import com.toranj.tyke.ui.fragments.Register2Fragment;
 import com.toranj.tyke.ui.fragments.Register3Fragment;
 import com.toranj.tyke.ui.fragments.SpendingFragment;
 
@@ -45,6 +46,7 @@ public interface ComponentProvider {
     void inject(BrandsFragment fragment);
     void inject(Register1Fragment fragment);
     void inject(Register3Fragment fragment);
+    void inject(Register2Fragment fragment);
 
     BrandApiInterface brandApiInterface();
     LotteryApiInterface lotteryApiInterface();

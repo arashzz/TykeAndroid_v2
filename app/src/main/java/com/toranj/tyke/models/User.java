@@ -5,12 +5,13 @@ package com.toranj.tyke.models;
  */
 public class User extends Base {
 
-    String username;
-    String image;
-    String sex;
-    String dateOfBirth;
-    String name;
-    String token;
+    private String username;
+    private String image;
+    private String sex;
+    private String dateOfBirth;
+    private String name;
+    private String token;
+    boolean isVerified;
 
     public String getUsername() {
         return username;
@@ -58,5 +59,13 @@ public class User extends Base {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public boolean isVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(boolean verified) {
+        isVerified = verified;
     }
 }

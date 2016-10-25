@@ -11,6 +11,9 @@ import retrofit2.http.Query;
  */
 public interface UserApiInterface {
 
-    @POST("/User/Register")
+    @POST("/user/register")
     Call<User> register(@Query("user") User user);
+
+    @POST("/user/verify")
+    Call<User> verify(@Query("user") User user, @Query("code") String code);
 }

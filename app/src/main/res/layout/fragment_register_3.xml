@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <TextView
+        android:id="@+id/tv_register_select_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/text_view_select_tags"/>
+
+    <Button
+        android:id="@+id/btn_register_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_register_next_step"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_size_title"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/btn_register_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_skip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="@dimen/text_size_title"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_register_tags_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_register_next_step"
+        android:layout_below="@id/tv_register_select_tags">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

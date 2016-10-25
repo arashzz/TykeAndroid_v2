@@ -21,6 +21,7 @@ import com.toranj.tyke.retrofit.TykeCallback;
 import com.toranj.tyke.retrofit.TykeCallbackResponse;
 import com.toranj.tyke.ui.fragments.listeners.RegisterFragmentListener;
 import com.toranj.tyke.ui.fragments.listeners.TagFragmentListener;
+import com.toranj.tyke.utility.CurrentUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +68,7 @@ public class Register3Fragment extends Fragment implements TagFragmentListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_register_2, container, false);
+        View view = inflater.inflate(R.layout.fragment_register_3, container, false);
         view.invalidate();
         initializeViewComponents(view);
         return view;
@@ -124,8 +125,12 @@ public class Register3Fragment extends Fragment implements TagFragmentListener {
         btnNextStep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<Boolean> call = tagApiInterface.addTagsForUser(currentUser, selectedTags);
-                call.enqueue(new TykeCallback<Boolean>(new AddTagsResponse()));
+                //dummy user //TODO:delete later
+                activityListener.onStep3Finished(null);
+                //TODO: uncomment later for actual api call
+//                Call<Boolean> call = tagApiInterface.addTagsForUser(currentUser, selectedTags);
+//                call.enqueue(new TykeCallback<Boolean>(new AddTagsResponse()));
+                //TODO: comment this when making an actual api call
             }
         });
 
@@ -133,7 +138,7 @@ public class Register3Fragment extends Fragment implements TagFragmentListener {
         btnSkipStep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activityListener.onStep2Finished(currentUser);
+                activityListener.onStep3Finished(currentUser);
             }
         });
     }
@@ -171,7 +176,12 @@ public class Register3Fragment extends Fragment implements TagFragmentListener {
     private class AddTagsResponse implements TykeCallbackResponse<Boolean> {
         @Override
         public void onResponse(Boolean result) {
+            if(result) {
+                activityListener.onStep3Finished(currentUser);
+            }
+            else {
 
+            }
         }
 
         @Override
